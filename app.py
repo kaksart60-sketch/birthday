@@ -14,7 +14,35 @@ MEMORIES = {
         "text": "valentine day proposal 😁",
         "audio": None,        # ya "voice1.mp3"
         "video_url": "https://www.youtube.com/embed/s1VoZpOAmLo",
-    }
+    },
+     "2": {
+        "title": "Diwali",
+        "hint": "You are a...",
+        "password": "brainrot",
+        "image": None,  # abhi image nahi
+        "text": "The Diwali moment where I actually got obsessed with you.",
+        "audio": None,
+        "video_url": "https://www.youtube.com/embed/GhzxznF7bC0",
+    },
+    "3": {
+    "title": "Old Ones 🤭",
+    "hint": "Boobie size 😌",
+    "password": "small",  # no caps
+    "image": None,
+    "text": "Miss those days more than the present 😚🤗",
+    "audio": None,
+    "video_url": "https://www.youtube.com/embed/X7Z4e-4VKms",
+},
+"4": {
+    "title": "Real Brainrot 😈",
+    "hint": "Ass size 😳",
+    "password": "small",  # keep lowercase
+    "image": None,
+    "text": "This is where my real brainrot started… 👀🔥",
+    "audio": None,
+    "video_url": "https://www.youtube.com/embed/_vyjyP5zAzc",
+},
+
 }
 
 
