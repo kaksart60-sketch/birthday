@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-md-6 col-lg-5">
+    <div class="card lv-card">
+      <div class="card-body">
+        <h3 class="mb-2">{{ memory.title }} 🔐</h3>
+        <p class="small text-muted mb-3">
+          Hint: {{ memory.hint }}
+        </p>
+
+        <form method="POST">
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control lv-input"
+              name="password"
+              placeholder="Type here..."
+              required>
+          </div>
+          <button type="submit" class="btn lv-btn w-100">
+            Unlock 🔓
+          </button>
+        </form>
+
+        <a href="{{ url_for('index') }}" class="btn btn-link text-light mt-3 p-0 small">
+          ← Back to memories
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

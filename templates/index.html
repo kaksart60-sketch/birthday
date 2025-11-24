@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center mb-4">
+  <div class="col-lg-8 text-center">
+    <h1 class="lv-title mb-2">Your Secret Memories 🗝️</h1>
+    <p class="lv-subtitle">
+      MY FAVORITE SMALL ASS😶‍🌫️
+    </p>
+  </div>
+</div>
+
+<div class="row justify-content-center g-3">
+  {% for mid, m in memories.items() %}
+  <div class="col-md-6 col-lg-4">
+    <div class="card lv-card h-100">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title mb-1">{{ m.title }}</h5>
+        <p class="card-text small text-muted mb-3">{{ m.hint }}</p>
+
+        <div class="mt-auto">
+          <a href="{{ url_for('memory_lock', mid=mid) }}" class="btn lv-btn w-100">
+            Unlock Memory 🔐
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

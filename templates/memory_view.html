@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-lg-7">
+    <div class="card lv-card lv-card-memory">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="lv-chip">For us 💑</span>
+          <span class="lv-date small text-muted">Locked memory</span>
+        </div>
+
+        <h2 class="mb-2 lv-memory-title">{{ memory.title }}</h2>
+        <p class="lv-memory-subtitle mb-3">
+          Some moments don’t need Instagram… bas hum dono ka yaad rakhna enough hai. 💖
+        </p>
+
+        {% if memory.image %}
+          <div class="lv-img-wrapper mb-3">
+            <img
+              src="{{ url_for('static', filename='media/' + memory.image) }}"
+              class="img-fluid rounded lv-img">
+          </div>
+        {% endif %}
+
+        {% if memory.text %}
+          <p class="mb-3 lv-text">
+            {{ memory.text }}
+          </p>
+        {% endif %}
+
+        {% if memory.audio %}
+          <div class="mb-3">
+            <p class="small mb-1 text-uppercase lv-section-label">Voice note</p>
+            <audio id="voice-note" controls class="w-100 lv-audio" autoplay>
+              <source src="{{ url_for('static', filename='media/' + memory.audio) }}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+
+          <script>
+            // Best-effort autoplay (browser block kare to quietly ignore)
+            window.addEventListener('load', () => {
+              const a = document.getElementById('voice-note');
+              if (a) {
+                a.play().catch(() => {});
+              }
+            });
+          </script>
+        {% endif %}
+
+        {% if memory.video_url %}
+          <div class="mb-2">
+            <p class="small mb-1 text-uppercase lv-section-label">Video memory</p>
+            <div class="ratio ratio-16x9 lv-video-frame">
+              <iframe
+                src="{{ memory.video_url }}"
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+              </iframe>
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <a href="{{ url_for('index') }}" class="btn btn-outline-light btn-sm">
+            ← Back
+          </a>
+          <span class="small text-muted">
+            This stays between you & me 💌
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+

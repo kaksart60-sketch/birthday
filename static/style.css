@@ -1,0 +1,212 @@
+/* GLOBAL */
+
+body.lv-body {
+  min-height: 100vh;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #fef9ff;
+  position: relative;
+}
+
+.lv-bg {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top left, #ff9a9e, #ff6cab 35%, #6a11cb 70%, #1b1f3b);
+  z-index: -2;
+}
+
+.lv-main {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* NAVBAR */
+
+.lv-nav {
+  background: rgba(5, 5, 20, 0.7);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.lv-nav .navbar-brand {
+  color: #ffeef8;
+  letter-spacing: 0.06em;
+  font-size: 1.05rem;
+}
+
+/* CARDS / CONTAINERS */
+
+.lv-card {
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), rgba(8, 8, 25, 0.9));
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65);
+  color: #fff;
+}
+
+.lv-card p,
+.lv-card h2,
+.lv-card h3,
+.lv-card h5,
+.lv-card small {
+  color: #fff;
+}
+
+/* Home title text */
+
+.lv-title {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.lv-subtitle {
+  color: rgba(249, 242, 255, 0.9);
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+
+/* Buttons & inputs */
+
+.lv-btn {
+  background: linear-gradient(135deg, #ff758c, #ff9aeb);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding-block: 0.55rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.lv-btn:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+
+.lv-input {
+  background: rgba(12, 12, 32, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.lv-input::placeholder {
+  color: rgba(230, 220, 245, 0.6);
+}
+
+.lv-input:focus {
+  background: rgba(12, 12, 32, 1);
+  border-color: #ffb3da;
+  box-shadow: 0 0 0 0.2rem rgba(255, 179, 218, 0.35);
+  color: #fff;
+}
+
+/* Alert (wrong password) */
+
+.lv-alert {
+  background: rgba(220, 53, 69, 0.93);
+  border-radius: 999px;
+  border: 0;
+}
+
+/* MEMORY VIEW SPECIFIC */
+
+.lv-card-memory {
+  position: relative;
+  overflow: hidden;
+}
+
+.lv-card-memory::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at top right, rgba(255, 193, 218, 0.35), transparent 60%);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.lv-card-memory .card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.lv-chip {
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 192, 203, 0.18);
+  border: 1px solid rgba(255, 235, 245, 0.6);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.lv-memory-title {
+  font-weight: 600;
+}
+
+.lv-memory-subtitle {
+  font-size: 0.85rem;
+  color: rgba(250, 238, 255, 0.9);
+  font-weight: 300;
+}
+
+/* Image */
+
+.lv-img-wrapper {
+  border-radius: 18px;
+  padding: 0.25rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.28), rgba(255, 192, 203, 0.12));
+}
+
+.lv-img {
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  width: 100%;
+}
+
+/* Main text */
+
+.lv-text {
+  font-weight: 300;
+  line-height: 1.7;
+  color: #ffeef8;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+}
+
+/* Section labels */
+
+.lv-section-label {
+  color: rgba(255, 230, 246, 0.85);
+  letter-spacing: 0.16em;
+  font-size: 0.68rem;
+}
+
+/* Audio */
+
+.lv-audio {
+  border-radius: 999px;
+  background: rgba(11, 11, 30, 0.9);
+}
+
+/* Video frame */
+
+.lv-video-frame iframe {
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Small screens */
+
+@media (max-width: 576px) {
+  .lv-main {
+    padding-inline: 0.75rem;
+  }
+
+  .lv-card {
+    border-radius: 18px;
+  }
+}
+
